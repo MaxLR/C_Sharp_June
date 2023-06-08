@@ -20,14 +20,18 @@ public class HomeController : Controller
     }
 
     [HttpPost("addPet")]
-    public IActionResult AddPet(string Name, string Type, int Age)
+    public IActionResult Create(Pet newPet)
     {
-        Console.WriteLine($"{Name} is a {Age} year old {Type}");
-        if(Type == "tortoise")
+        if(!ModelState.IsValid)
+        {
+            return View("Index");
+        }
+        
+        Console.WriteLine($"{newPet.Name} is a {newPet.Age} year old {newPet.Type}");
+        if(newPet.Type == "tortoise")
         {
             ViewBag.SecretMessage = "You picked the secret pet type!!!!";
-            ViewBag.Name = Name;
-            return View("Secret");
+            return View("Secret", newPet);
         }
         return Redirect("/");
     }
