@@ -26,6 +26,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <form asp-controller="Home" asp-action="ClearSession" method="post">
+                                <input class="btn-link text-dark" type="submit" value="Clear Session">
+                            </form>
+                        </li>
                     </ul>
                 </div>
             </div>
