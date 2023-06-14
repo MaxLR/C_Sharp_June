@@ -61,12 +61,12 @@ class BinarySearchTree {
     insertRecursive(newVal, curr = this.root) { }
 
     /**
- * Determines if this tree contains the given searchVal.
- * - Time: O(h) linear, h = height of tree.
- * - Space: O(1) constant.
- * @param {number} searchVal The number to search for in the node's data.
- * @returns {boolean} Indicates if the searchVal was found.
- */
+     * Determines if this tree contains the given searchVal.
+     * - Time: O(h) linear, h = height of tree.
+     * - Space: O(1) constant.
+     * @param {number} searchVal The number to search for in the node's data.
+     * @returns {boolean} Indicates if the searchVal was found.
+     */
     contains(searchVal) {
         let current = this.root;
 
