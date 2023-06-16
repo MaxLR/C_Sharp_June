@@ -92,6 +92,7 @@ class BinarySearchTree {
         vals.push(node.data);
         this.toArrPreorder(node.left, vals);
         this.toArrPreorder(node.right, vals);
+        return vals;
     }
 
     /**
