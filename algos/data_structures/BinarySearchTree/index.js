@@ -87,6 +87,14 @@ class BinarySearchTree {
         return vals;
     }
 
+    toArrPreorder2(node = this.root, vals = []) {
+        if(!node) { return vals };
+        vals.push(node.data);
+        this.toArrPreorder(node.left, vals);
+        this.toArrPreorder(node.right, vals);
+        return vals;
+    }
+
     /**
      * DFS Inorder: (Left, CurrNode, Right)
      * Converts this BST into an array following Depth First Search inorder.
