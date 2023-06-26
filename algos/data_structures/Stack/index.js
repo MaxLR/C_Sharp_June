@@ -56,6 +56,8 @@ class Stack {
     size() { }
 }
 
+//EXTRA: Recreate the stack functionality with a linked list
+
 class StackNode {
     constructor(data) {
         this.data = data;
