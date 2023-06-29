@@ -153,3 +153,5 @@ class LinkedListStack {
         return len;
     }
 }
+
+module.exports = { Stack };
